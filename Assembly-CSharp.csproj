@@ -58,11 +58,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\PinFall.cs" />
+    <Compile Include="Assets\Scripts\BallColorToggle.cs" />
+    <Compile Include="Assets\Scripts\BallBehavior.cs" />
     <Compile Include="Assets\XRPlatformControllerSetup.cs" />
     <Compile Include="Assets\Scripts\SpawnBall.cs" />
     <Compile Include="Assets\Scripts\SpawnPins.cs" />
-    <Compile Include="Assets\Scripts\BallBehavior.cs" />
-    <Compile Include="Assets\Scripts\BallColorToggle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

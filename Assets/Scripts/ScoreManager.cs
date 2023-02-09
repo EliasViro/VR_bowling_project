@@ -8,9 +8,9 @@ public class ScoreManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private int score = 0;
 
-    public void IncreaseScore()
+
+    public void Update()
     {
-        score++;
         if (score == 10)
         {
             scoreText.text = score.ToString() + "/10 !!!";
@@ -19,6 +19,10 @@ public class ScoreManager : MonoBehaviour
         {
             scoreText.text = score.ToString() + "/10";
         }
+    }
+    public void IncreaseScore()
+    {
+        score++;
     }
 
     public void WipeScore()

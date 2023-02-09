@@ -3174,14 +3174,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinFall_Update_m46D8D9B30741C7EF364AE128
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// if ((transform.rotation.x > 0.60f  || transform.rotation.x < -0.60f || transform.rotation.z > 0.60f || transform.rotation.z < -0.60f) && fallen == false)
+		// if ((transform.rotation.x > 0.40f  || transform.rotation.x < -0.40f || transform.rotation.z > 0.40f || transform.rotation.z < -0.40f) && fallen == false)
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_1;
 		L_1 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_0, NULL);
 		float L_2 = L_1.___x_0;
-		if ((((float)L_2) > ((float)(0.600000024f))))
+		if ((((float)L_2) > ((float)(0.400000006f))))
 		{
 			goto IL_005c;
 		}
@@ -3193,7 +3193,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinFall_Update_m46D8D9B30741C7EF364AE128
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4;
 		L_4 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_3, NULL);
 		float L_5 = L_4.___x_0;
-		if ((((float)L_5) < ((float)(-0.600000024f))))
+		if ((((float)L_5) < ((float)(-0.400000006f))))
 		{
 			goto IL_005c;
 		}
@@ -3205,7 +3205,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinFall_Update_m46D8D9B30741C7EF364AE128
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_7;
 		L_7 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_6, NULL);
 		float L_8 = L_7.___z_2;
-		if ((((float)L_8) > ((float)(0.600000024f))))
+		if ((((float)L_8) > ((float)(0.400000006f))))
 		{
 			goto IL_005c;
 		}
@@ -3217,7 +3217,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinFall_Update_m46D8D9B30741C7EF364AE128
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10;
 		L_10 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_9, NULL);
 		float L_11 = L_10.___z_2;
-		if ((!(((float)L_11) < ((float)(-0.600000024f)))))
+		if ((!(((float)L_11) < ((float)(-0.400000006f)))))
 		{
 			goto IL_007f;
 		}
@@ -3266,8 +3266,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PinFall__ctor_m42627C555EB93BFB4E92B5D75
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void ScoreManager::IncreaseScore()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_IncreaseScore_mD47A5276394750BD2B2EF398B1F55F81EAE8BE26 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
+// System.Void ScoreManager::Update()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_Update_m68EC29B04B4118B51E293C1C3077D87FF3FE7811 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -3277,40 +3277,48 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_IncreaseScore_mD47A52763947
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		// score++;
-		int32_t L_0 = __this->___score_5;
-		__this->___score_5 = ((int32_t)il2cpp_codegen_add(L_0, 1));
 		// if (score == 10)
-		int32_t L_1 = __this->___score_5;
-		if ((!(((uint32_t)L_1) == ((uint32_t)((int32_t)10)))))
+		int32_t L_0 = __this->___score_5;
+		if ((!(((uint32_t)L_0) == ((uint32_t)((int32_t)10)))))
 		{
-			goto IL_0039;
+			goto IL_002b;
 		}
 	}
 	{
 		// scoreText.text = score.ToString() + "/10 !!!";
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_2 = __this->___scoreText_4;
-		int32_t* L_3 = (&__this->___score_5);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___scoreText_4;
+		int32_t* L_2 = (&__this->___score_5);
+		String_t* L_3;
+		L_3 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_2, NULL);
 		String_t* L_4;
-		L_4 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_3, NULL);
-		String_t* L_5;
-		L_5 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_4, _stringLiteral0668A4CEFD47ED13F0B844A044928DB76339CCD7, NULL);
-		NullCheck(L_2);
-		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_2, L_5);
+		L_4 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_3, _stringLiteral0668A4CEFD47ED13F0B844A044928DB76339CCD7, NULL);
+		NullCheck(L_1);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_1, L_4);
 		return;
 	}
 
-IL_0039:
+IL_002b:
 	{
 		// scoreText.text = score.ToString() + "/10";
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_6 = __this->___scoreText_4;
-		int32_t* L_7 = (&__this->___score_5);
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_5 = __this->___scoreText_4;
+		int32_t* L_6 = (&__this->___score_5);
+		String_t* L_7;
+		L_7 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_6, NULL);
 		String_t* L_8;
-		L_8 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_7, NULL);
-		String_t* L_9;
-		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_8, _stringLiteralB1EDAF2D6881BB251F1D599487E4623C7457658E, NULL);
-		NullCheck(L_6);
-		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_6, L_9);
+		L_8 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_7, _stringLiteralB1EDAF2D6881BB251F1D599487E4623C7457658E, NULL);
+		NullCheck(L_5);
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_5, L_8);
+		// }
+		return;
+	}
+}
+// System.Void ScoreManager::IncreaseScore()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_IncreaseScore_mD47A5276394750BD2B2EF398B1F55F81EAE8BE26 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
+{
+	{
+		// score++;
+		int32_t L_0 = __this->___score_5;
+		__this->___score_5 = ((int32_t)il2cpp_codegen_add(L_0, 1));
 		// }
 		return;
 	}

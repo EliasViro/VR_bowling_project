@@ -32,31 +32,33 @@ extern void BallColorToggle__ctor_mC055AADB9DF214493547C0C98FDB3C2E3C218E28 (voi
 extern void PinFall_Update_m46D8D9B30741C7EF364AE128B40DEABC3100DE42 (void);
 // 0x0000000A System.Void PinFall::.ctor()
 extern void PinFall__ctor_m42627C555EB93BFB4E92B5D75E86944D9DE4FE7F (void);
-// 0x0000000B System.Void ScoreManager::IncreaseScore()
+// 0x0000000B System.Void ScoreManager::Update()
+extern void ScoreManager_Update_m68EC29B04B4118B51E293C1C3077D87FF3FE7811 (void);
+// 0x0000000C System.Void ScoreManager::IncreaseScore()
 extern void ScoreManager_IncreaseScore_mD47A5276394750BD2B2EF398B1F55F81EAE8BE26 (void);
-// 0x0000000C System.Void ScoreManager::WipeScore()
+// 0x0000000D System.Void ScoreManager::WipeScore()
 extern void ScoreManager_WipeScore_mE828A793FEDE21D5A8568072FC1E05097EF6B551 (void);
-// 0x0000000D System.Void ScoreManager::.ctor()
+// 0x0000000E System.Void ScoreManager::.ctor()
 extern void ScoreManager__ctor_mE5C264C34A9CBBAB72DCF99CCCC9841AF8F9FEE6 (void);
-// 0x0000000E System.Void SpawnBall::Awake()
+// 0x0000000F System.Void SpawnBall::Awake()
 extern void SpawnBall_Awake_m9932D2E72F1E707AA1E808DB13A6F40887F1CBE6 (void);
-// 0x0000000F System.Void SpawnBall::SpawnOneBall()
+// 0x00000010 System.Void SpawnBall::SpawnOneBall()
 extern void SpawnBall_SpawnOneBall_mEE3365A9753C433C42EE107AC6EC8C416E0D2518 (void);
-// 0x00000010 System.Void SpawnBall::.ctor()
+// 0x00000011 System.Void SpawnBall::.ctor()
 extern void SpawnBall__ctor_mFF6E853D42E1406DB5A46C8371CCEDD568A5341F (void);
-// 0x00000011 System.Void SpawnPins::Awake()
+// 0x00000012 System.Void SpawnPins::Awake()
 extern void SpawnPins_Awake_mA33A4F13F18E34D5719E02A06EF7EB3064B10F3B (void);
-// 0x00000012 System.Void SpawnPins::DestroyPins()
+// 0x00000013 System.Void SpawnPins::DestroyPins()
 extern void SpawnPins_DestroyPins_m35E52773B597B1639D152A1BE9B478D4D852CFA4 (void);
-// 0x00000013 System.Void SpawnPins::SpawnTenPins()
+// 0x00000014 System.Void SpawnPins::SpawnTenPins()
 extern void SpawnPins_SpawnTenPins_m13AF22AB404202FFC612AE47B0F49A3AF4EACAAE (void);
-// 0x00000014 System.Void SpawnPins::.ctor()
+// 0x00000015 System.Void SpawnPins::.ctor()
 extern void SpawnPins__ctor_m522791DD2F2D5D27B3BA396FD6B7137A55B66D34 (void);
-// 0x00000015 System.Void Unity.Template.VR.XRPlatformControllerSetup::Start()
+// 0x00000016 System.Void Unity.Template.VR.XRPlatformControllerSetup::Start()
 extern void XRPlatformControllerSetup_Start_m1F22FCA29DFD83DC0E343C3F391D04A7C52085BF (void);
-// 0x00000016 System.Void Unity.Template.VR.XRPlatformControllerSetup::.ctor()
+// 0x00000017 System.Void Unity.Template.VR.XRPlatformControllerSetup::.ctor()
 extern void XRPlatformControllerSetup__ctor_mF9A3998AF90962CF8F35BAF2221558BDF5F6596E (void);
-static Il2CppMethodPointer s_methodPointers[22] = 
+static Il2CppMethodPointer s_methodPointers[23] = 
 {
 	BallBehavior_Awake_m73BCCC41725DC0E26726C3CAA00EAA2B888983D1,
 	BallBehavior_Update_m7D2CB36844000BC4CAA868AC5DD1A567BA2041E0,
@@ -68,6 +70,7 @@ static Il2CppMethodPointer s_methodPointers[22] =
 	BallColorToggle__ctor_mC055AADB9DF214493547C0C98FDB3C2E3C218E28,
 	PinFall_Update_m46D8D9B30741C7EF364AE128B40DEABC3100DE42,
 	PinFall__ctor_m42627C555EB93BFB4E92B5D75E86944D9DE4FE7F,
+	ScoreManager_Update_m68EC29B04B4118B51E293C1C3077D87FF3FE7811,
 	ScoreManager_IncreaseScore_mD47A5276394750BD2B2EF398B1F55F81EAE8BE26,
 	ScoreManager_WipeScore_mE828A793FEDE21D5A8568072FC1E05097EF6B551,
 	ScoreManager__ctor_mE5C264C34A9CBBAB72DCF99CCCC9841AF8F9FEE6,
@@ -81,7 +84,7 @@ static Il2CppMethodPointer s_methodPointers[22] =
 	XRPlatformControllerSetup_Start_m1F22FCA29DFD83DC0E343C3F391D04A7C52085BF,
 	XRPlatformControllerSetup__ctor_mF9A3998AF90962CF8F35BAF2221558BDF5F6596E,
 };
-static const int32_t s_InvokerIndices[22] = 
+static const int32_t s_InvokerIndices[23] = 
 {
 	4738,
 	4738,
@@ -105,12 +108,13 @@ static const int32_t s_InvokerIndices[22] =
 	4738,
 	4738,
 	4738,
+	4738,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	22,
+	23,
 	s_methodPointers,
 	0,
 	NULL,
